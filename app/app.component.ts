@@ -1,22 +1,40 @@
-import   {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector:'my-app',
+  selector: 'my-app',
   template: `
     <header>
-      <div className="navbar navbar-inverse">
-        <div className="navbar-header">
-          <a href="/" className="navbar-brand">My Angular 2 App!</a>
+      <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">My Angular 2 App!</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+      <div class="row">
+        <div class="col-sm-4">
+
+          <div *ngIf="users">
+            <ul class="list-group users-list">
+                <li class="list-group-item" *ngFor="let user of users">
+                  {{user.name}} ({{user.username}})
+                </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-sm-8">
+
+          <div class="jumbotron">
+            <h1>HiepXanh App!</h1>
+            <p>{{ message }}</p>
+          </div>
+
         </div>
       </div>
-    </header>
 
-
-    <div className="jumbotron">
-      <h1>HiepXanh App!</h1>
-    </div>
-
-
+     </main>
     <footer class="text-center">
       copyright &copy; 2016
     </footer>
@@ -26,4 +44,11 @@ import   {Component} from '@angular/core';
   `]
 
 })
-export class AppComponent { }
+export class AppComponent {
+  message = 'Hello';
+  users = [
+  {id: 25,name: 'Chris', username: 'Hiep'},
+  {id: 26,name: 'Nick', username: 'Hiep'},
+  {id: 27,name: 'Holly', username: 'Hiep'},
+  ]
+}
