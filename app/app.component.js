@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <div className=\"jumbotron\">\n      <h1>HiepXanh App!</h1>\n    </div>\n  ",
+            template: "\n    <header>\n      <div className=\"navbar navbar-inverse\">\n        <div className=\"navbar-header\">\n          <a href=\"/\" className=\"navbar-brand\">My Angular 2 App!</a>\n        </div>\n      </div>\n    </header>\n\n\n    <div className=\"jumbotron\">\n      <h1>HiepXanh App!</h1>\n    </div>\n\n\n    <footer class=\"text-center\">\n      copyright &copy; 2016\n    </footer>\n  ",
             styles: ["\n    .jumbotron { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); }\n  "]
         }), 
         __metadata('design:paramtypes', [])
