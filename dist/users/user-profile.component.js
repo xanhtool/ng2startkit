@@ -9,30 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'Hello';
-        this.users = [
-            { id: 25, name: 'Chris', username: 'Hiep' },
-            { id: 26, name: 'Nick', username: 'Hiep' },
-            { id: 27, name: 'Holly', username: 'Hiep' },
-        ];
+var user_1 = require('../shared/models/user');
+var UserProfileComponent = (function () {
+    function UserProfileComponent() {
     }
-    AppComponent.prototype.selectUser = function (user) {
-        this.activeUser = user;
-        console.log(this.activeUser);
-    };
-    AppComponent.prototype.onUserCreated = function (event) {
-        this.users.push(event.user);
-    };
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', user_1.User)
+    ], UserProfileComponent.prototype, "user", void 0);
+    UserProfileComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html',
-            styleUrls: ['./app/app.component.css']
+            selector: 'user-profile',
+            templateUrl: 'app/users/user-profile.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], UserProfileComponent);
+    return UserProfileComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.UserProfileComponent = UserProfileComponent;
