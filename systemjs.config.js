@@ -8,13 +8,17 @@
     'app':                        'dist', // 'dist',
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-    'rxjs':                       'node_modules/rxjs'
+    'rxjs':                       'node_modules/rxjs',
+    'clipboard': 'node_modules/clipboard/dist/clipboard.js',
+    'angular2-clipboard': 'node_modules/angular2-clipboard'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'angular2-clipboard': {main: 'index.js',defaultExtension: 'js'},
+    'clipboard': {defaultExtension: 'js'}
   };
   var ngPackageNames = [
     'common',
@@ -27,6 +31,8 @@
     'router',
     'router-deprecated',
     'upgrade',
+    'angular2-clipboard',
+    'clipboard'
   ];
   // Individual files (~300 requests):
   function packIndex(pkgName) {
